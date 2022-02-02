@@ -53,3 +53,22 @@ git checkout -- .
 Если хочешь удалить отслеживаемые изменения (git add):
 	1. git reset - переводим отслеживаемые в untracked
 	2. git checkout -- . - удаляем все untracked изменения
+
+git commit -a -m - то же самое, что git add . и git commit -m добавляет только модифицированные файлы
+git commit --amend - дополняет последний коммит, добавляя в него последние изменения. Новый коммит не создается
+
+git clean - удаляет untracked файлы
+git clean -n - покажет что мы можем удалить
+git clean -f - удаляет untracked файлы
+
+git remote
+git remote -v - просмотр существующих удаленных реп
+git remote add <name> <address> - добавить репу
+git remote add origin <link.git>
+на нашем компьютере хранится только ссылка на удаленный репозиторий. Origin - название ссылки
+
+git push
+git push origin master - отправить коммит в удаленную репу в мастер бренчу
+git pull - команда для получения обновлений с удаленной репы
+git pull origin master - выкачать все коммиты из мастер бренчи
+git clone <repo> - полностью клонирует репу
